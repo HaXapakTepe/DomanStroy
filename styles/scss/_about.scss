@@ -41,7 +41,7 @@
     position: absolute;
     left: 60%;
     transform: rotate(-5deg) translateX(-50%);
-    bottom: 20px;
+    @include fluid(bottom, 10px, 20px);
   }
 
   &__title {
@@ -71,6 +71,9 @@
       position: relative;
       z-index: 2;
       @include fluid(height, 400px, 500px);
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
     &::after {
@@ -90,8 +93,8 @@
       position: absolute;
       top: 0;
       right: 0;
-      @include fluid(width, 80px, 111px);
-      @include fluid(height, 80px, 111px);
+      @include fluid(width, 70px, 111px);
+      @include fluid(height, 70px, 111px);
       border-radius: 50%;
       background: linear-gradient(129.68deg, rgb(192, 198, 206) 6.068%, rgb(148, 164, 180) 87.378%);
       z-index: 1;
@@ -106,12 +109,47 @@
       grid-template-columns: 1fr;
     }
 
+    &__elemBot {
+      bottom: 0px;
+    }
+
     &__picture {
-      position: absolute;
-      top: 50%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .about {
+    &__inner {
+      position: relative;
+      grid-template-columns: 1fr;
+    }
+
+    &__elemBot {
       left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
+    }
+
+    &__picture {
+      &::after {
+        right: -40px;
+        width: 300px;
+        height: 300px;
+      }
+
+      &::before {
+        top: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+      }
+
+      &-img {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 }

@@ -1209,7 +1209,17 @@ body.no-scroll {
   position: absolute;
   left: 60%;
   transform: rotate(-5deg) translateX(-50%);
-  bottom: 20px;
+  bottom: 10px;
+}
+@media (min-width: 992px) {
+  .about__elemBot {
+    bottom: calc(0.0223214286 * 100vw + -12.1428571429px);
+  }
+}
+@media (min-width: 1440px) {
+  .about__elemBot {
+    bottom: 20px;
+  }
 }
 .about__title {
   margin-bottom: 20px;
@@ -1295,6 +1305,9 @@ body.no-scroll {
   position: relative;
   z-index: 2;
   height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
 }
 @media (min-width: 992px) {
   .about__picture-img {
@@ -1352,15 +1365,15 @@ body.no-scroll {
   position: absolute;
   top: 0;
   right: 0;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: linear-gradient(129.68deg, rgb(192, 198, 206) 6.068%, rgb(148, 164, 180) 87.378%);
   z-index: 1;
 }
 @media (min-width: 992px) {
   .about__picture::before {
-    width: calc(0.0691964286 * 100vw + 11.3571428571px);
+    width: calc(0.0915178571 * 100vw + -20.7857142857px);
   }
 }
 @media (min-width: 1440px) {
@@ -1370,7 +1383,7 @@ body.no-scroll {
 }
 @media (min-width: 992px) {
   .about__picture::before {
-    height: calc(0.0691964286 * 100vw + 11.3571428571px);
+    height: calc(0.0915178571 * 100vw + -20.7857142857px);
   }
 }
 @media (min-width: 1440px) {
@@ -1384,12 +1397,37 @@ body.no-scroll {
     position: relative;
     grid-template-columns: 1fr;
   }
+  .about__elemBot {
+    bottom: 0px;
+  }
   .about__picture {
-    position: absolute;
-    top: 50%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 576px) {
+  .about__inner {
+    position: relative;
+    grid-template-columns: 1fr;
+  }
+  .about__elemBot {
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  }
+  .about__picture::after {
+    right: -40px;
+    width: 300px;
+    height: 300px;
+  }
+  .about__picture::before {
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+  }
+  .about__picture-img {
+    width: 280px;
+    height: 280px;
   }
 }
 .advantages__wrapper {
