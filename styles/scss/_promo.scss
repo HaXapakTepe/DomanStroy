@@ -1,0 +1,62 @@
+.promo {
+  &__wrapper {
+    position: relative;
+    @include fluid(padding-top, 120px, 220px);
+    @include fluid(padding-bottom, 50px, 90px);
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -1;
+    height: 100%;
+  }
+
+  &__title {
+    @include fluid(max-width, 350px, 540px);
+    @include fluid(margin-bottom, 15px, 20px);
+  }
+
+  &__subtitle {
+    @include fluid(margin-bottom, 20px, 60px);
+    @include fluid(font-size, 18px, 24px);
+    font-weight: 600;
+    line-height: 1.25;
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 15px, 30px);
+    @include fluid(margin-bottom, 20px, 60px);
+
+    &-item {
+      position: relative;
+      @include fluid(padding-left, 26px, 36px);
+      @include fluid(font-size, 16px, 18px);
+      color: #fff;
+      line-height: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 1px;
+        @include fluid(width, 12px, 16px);
+        @include fluid(height, 12px, 16px);
+        background-color: #7EC637;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__elem {
+    color: #fff;
+    @include fluid(margin-top, 30px, 40px);
+    @include fluid(margin-left, 90px, 200px);
+  }
+}

@@ -1,0 +1,35 @@
+.elem {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1;
+  display: flex;
+  font-family: "Euroscript Pro";
+  @include fluid(font-size, 24px, 32px);
+  line-height: 1;
+  color: #CFBCB5;
+  text-align: center;
+
+  &__icon {
+    position: relative;
+    @include fluid(top, -30px, -50px);
+
+    svg {
+      @include fluid(height, 60px, 80px);
+    }
+  }
+
+  &--left {
+    transform: rotate(-5deg);
+  }
+
+  &--right {
+    transform: rotate(5deg);
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

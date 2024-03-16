@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  align-items: center;
+  @include fluid(gap, 15px, 30px);
+
+  &__icon {
+    svg {
+      path {
+        transition: fill 0.23s ease-in-out;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #7EC637
+        }
+      }
+    }
+  }
+
+  &--mla {
+    margin-left: auto;
+  }
+}

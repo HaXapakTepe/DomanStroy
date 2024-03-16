@@ -1,0 +1,91 @@
+.company {
+  &__title {
+    @include fluid(padding-bottom, 15px, 30px);
+
+    &:has(+*) {
+      @include fluid(margin-bottom, 15px, 30px);
+      padding-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    @include fluid(font-size, 18px, 24px);
+    color: #fff;
+    @include fluid(max-width, 570px, 750px);
+    @include fluid(padding-bottom, 30px, 60px);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include fluid(gap, 15px, 30px);
+    @include fluid(margin-bottom, 20px, 60px);
+    @include fluid(margin-top, 30px, 60px);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 15px, 20px);
+  }
+
+  &__text {
+    &--accent {
+      font-weight: 600;
+      @include fluid(font-size, 18px, 24px);
+      @include fluid(margin-bottom, 20px, 60px);
+      color: #7EC637;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include fluid(gap, 15px, 30px);
+    @include fluid(padding-top, 30px, 60px);
+    border-top: 1px solid #E1D7D3;
+
+    &-num {
+      font-weight: 700;
+      @include fluid(font-size, 40px, 80px);
+      color: #7EC637;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      @include fluid(gap, 15px, 30px);
+    }
+
+    &-text {
+      font-weight: 600;
+      @include fluid(font-size, 16px, 18px);
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .company {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__info {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .company {
+    &__info {
+      grid-template-columns: 1fr;
+
+      &-text,
+      &-num {
+        text-align: center;
+      }
+    }
+  }
+}

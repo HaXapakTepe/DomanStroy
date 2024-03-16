@@ -1,0 +1,70 @@
+.form {
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include fluid(gap, 10px, 20px);
+    @include fluid(margin-bottom, 15px, 30px);
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    @include fluid(padding-top, 10px, 15px);
+    @include fluid(padding-bottom, 10px, 15px);
+    @include fluid(padding-left, 15px, 20px);
+    @include fluid(padding-right, 15px, 20px);
+    gap: 7px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    &-title {
+      color: #CFBCB5;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &-input {
+      @include fluid(font-size, 16px, 18px);
+      line-height: 1;
+
+      &::-webkit-input-placeholder {
+        color: #CFBCB5;
+      }
+
+      &::-moz-placeholder {
+        color: #CFBCB5;
+      }
+
+      &:-ms-input-placeholder {
+        color: #CFBCB5;
+      }
+
+      &::-ms-input-placeholder {
+        color: #CFBCB5;
+      }
+
+      &::placeholder {
+        color: #CFBCB5;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    @include fluid(gap, 15px, 30px);
+  }
+}
+
+@media(max-width: 992px) {
+  .form {
+    &__box {
+      grid-template-columns: 1fr;
+    }
+
+    &__flex {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/images/favicon.svg" type="x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" />
+  <link rel="stylesheet" href="../styles/css/normalize.css">
+  <link rel="stylesheet" href="../styles/css/style.css?v=0.0001">
+  <title>Проект</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <a class="logo" href="#">
+            <img class="logo__img" src="../assets/images/logo.svg" alt="">
+          </a>
+          <div class="header__loca" href="#">
+            <i class="header__loca-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.0003 1.6666C6.77949 1.6666 4.16699 4.2791 4.16699 7.49993C4.16699 11.8749 10.0003 18.3333 10.0003 18.3333C10.0003 18.3333 15.8337 11.8749 15.8337 7.49993C15.8337 4.2791 13.2212 1.6666 10.0003 1.6666ZM10.0003 9.58326C8.85032 9.58326 7.91699 8.64993 7.91699 7.49993C7.91699 6.34993 8.85032 5.4166 10.0003 5.4166C11.1503 5.4166 12.0837 6.34993 12.0837 7.49993C12.0837 8.64993 11.1503 9.58326 10.0003 9.58326Z"
+                  fill="#CFBCB5" />
+              </svg>
+            </i>
+            <div class="header__loca-box">
+              <select class="header__loca-select" name="loca">
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+              </select>
+            </div>
+          </div>
+          <a class="phone" href="mailto:+75555555555">
+            <i class="phone__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.3085 14.6839L15.578 15.6588C15.3704 15.7757 15.1301 15.8214 14.894 15.789C14.6579 15.7566 14.4389 15.6478 14.2705 15.4792L8.49473 9.70346C8.32628 9.53492 8.21756 9.31592 8.18514 9.07985C8.15272 8.84378 8.19837 8.60359 8.31515 8.39587L9.29004 6.66539C9.46553 6.35394 9.53423 5.9936 9.48567 5.63943C9.4371 5.28526 9.27393 4.95672 9.02108 4.70401L6.42742 2.11035C6.27541 1.95826 6.09491 1.83761 5.89626 1.7553C5.6976 1.67298 5.48467 1.63062 5.26963 1.63062C5.05459 1.63062 4.84166 1.67298 4.64301 1.7553C4.44435 1.83761 4.26385 1.95826 4.11184 2.11035L2.93418 3.28718C2.24553 3.97583 1.80687 4.87494 1.68795 5.84155C1.56904 6.80816 1.77669 7.78678 2.27791 8.6218L2.8688 9.60663C5.88638 14.6358 10.1456 18.8053 15.2379 21.715L15.3546 21.7821C17.0942 22.776 19.2434 22.4864 20.6363 21.0944L21.866 19.8646C22.0181 19.7125 22.1388 19.5321 22.2211 19.3334C22.3034 19.1347 22.3458 18.9218 22.3458 18.7068C22.3458 18.4917 22.3034 18.2788 22.2211 18.0801C22.1388 17.8815 22.0181 17.701 21.866 17.549L19.2707 14.9537C19.0181 14.7005 18.6894 14.537 18.3351 14.4883C17.9807 14.4396 17.6202 14.5083 17.3085 14.6839Z"
+                  fill="#CFBCB5" />
+              </svg>
+            </i>
+            +7 555 555-55-55
+          </a>
+          <div class="socials">
+            <a href="#" class="socials__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.4899 8.51627C18.226 7.80289 18.9567 6.13835 15.8898 8.15958C13.0248 10.0705 10.1404 11.954 7.23707 13.8097C6.79496 14.0035 6.31699 14.1086 5.83189 14.1188C5.34679 14.1291 4.86456 14.0441 4.41417 13.8692C2.57402 13.3341 0.425847 12.6208 0.425847 12.6208C0.425847 12.6208 -1.04094 11.7277 1.46993 10.7766C1.46993 10.7766 12.0855 6.55448 15.7671 5.06699C17.1779 4.47251 21.9636 2.57017 21.9636 2.57017C21.9636 2.57017 24.1731 1.73661 23.9891 3.75913C23.9278 4.59141 23.4371 7.50694 22.9464 10.6577C22.209 15.1176 21.4116 19.9949 21.4116 19.9949C21.4116 19.9949 21.2889 21.3622 20.2461 21.6C19.1299 21.5817 18.0514 21.2054 17.1792 20.5299C16.9339 20.3516 12.5775 17.6751 10.9814 16.3673C10.819 16.2607 10.6871 16.116 10.5979 15.9467C10.5087 15.7775 10.4652 15.5891 10.4713 15.3991C10.4774 15.2091 10.533 15.0237 10.6329 14.8602C10.7328 14.6966 10.8738 14.5602 11.0427 14.4636C13.2319 12.5224 15.3814 10.5396 17.4899 8.51627Z"
+                  fill="#CFBCB5" />
+              </svg>
+            </a>
+            <a href="#" class="socials__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_222)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.40243 22.0132C7.30604 23.2611 9.56688 24 12.0053 24C18.6178 24 24 18.5989 24 11.98C24 11.6904 24 11.3709 23.9801 11.0516C23.4947 4.8818 18.31 0 12.0053 0C5.79943 0 0.664243 4.75197 0.0792683 10.8319C0.0296466 11.2213 0 11.5906 0 11.98C0 14.6056 0.852726 17.0616 2.29022 19.0182L0.803075 23.4809L5.40243 22.0132ZM15.8258 13.6558C15.842 13.6603 15.8584 13.665 15.8752 13.6696C15.8752 13.6718 15.9916 13.7305 16.1778 13.8246C16.907 14.1929 18.708 15.1027 18.7992 15.276C18.8953 15.4313 18.8953 16.1673 18.6178 17.0066C18.3312 17.8771 16.9457 18.6858 16.3432 18.7373C16.237 18.7463 16.1493 18.7684 16.0588 18.7912C15.6276 18.8999 15.133 19.0246 12.2819 17.8256C9.0492 16.4581 6.94448 13.029 6.57708 12.4304C6.55463 12.3938 6.53866 12.3678 6.52933 12.3535C6.52111 12.3409 6.50971 12.324 6.49548 12.3028C6.3099 12.027 5.64473 11.0384 5.33429 9.83514C5.21983 9.45173 5.14292 9.01635 5.14292 8.61218C5.14292 6.59141 6.02199 5.15087 7.89558 5.15087C7.9172 5.15087 7.94032 5.1491 7.96474 5.14723C8.14513 5.13342 8.39662 5.11417 8.64099 5.76229C8.89176 6.38799 9.44262 7.84677 9.62121 8.31973C9.64673 8.38731 9.66465 8.43476 9.673 8.45678C9.76827 8.63297 9.81587 8.84022 9.70141 9.08898C9.57626 9.36395 9.37297 9.62249 9.17906 9.86909C8.83949 10.3009 8.52872 10.6962 8.717 11.0788C8.89922 11.4311 9.58692 12.6022 10.5906 13.5764C11.7049 14.6505 12.6622 15.083 13.1302 15.2944C13.2041 15.3278 13.2657 15.3557 13.3139 15.3797C14.0008 15.7522 14.7058 14.5399 15.0611 13.929C15.0715 13.9111 15.0816 13.8938 15.0913 13.877C15.3184 13.5127 15.519 13.5692 15.8258 13.6558Z"
+                    fill="#CFBCB5" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_222">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="header__inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item menu__item--hidden">
+                <div class="menu__close"></div>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Заготовки
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Искусственный интеллект
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Каталог
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Фото и Видео
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger">
+            <div class="burger__line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="breadcrumbs breadcrumbs--alt">
+        <div class="breadcrumbs__wrapper">
+          <div class="container">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">
+                  Главная
+                </a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">
+                  Наши проекты
+                </a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--active" href="#">
+                  Проект №81
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="details">
+        <div class="details__wrapper">
+          <div class="container">
+            <div class="details__inner">
+              <div class="details__box">
+                <div class="details__swiperBig swiper mySwiper2">
+                  <div class="details__swiperBig-wrapper swiper-wrapper">
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperBig-slide swiper-slide">
+                      <img class="details__swiperBig-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="details__swiperSmall swiper mySwiper">
+                  <div class="details__swiperSmall-wrapper swiper-wrapper">
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/projects/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                    <div class="details__swiperSmall-slide swiper-slide">
+                      <img class="details__swiperSmall-img" src="../assets/images/details/1.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="details__info">
+                <p class="details__info-title">Проект дома № 81</p>
+                <div class="details__info-box">
+                  <div class="details__info-item">
+                    <p class="details__info-subtitle">Цена строительства</p>
+                    <p class="details__info-num details__info-num--accent">5 900 000 ₽</p>
+                  </div>
+                  <div class="details__info-item">
+                    <p class="details__info-subtitle">Общая площадь</p>
+                    <p class="details__info-num">120 м2</p>
+                  </div>
+                  <div class="details__info-item">
+                    <p class="details__info-subtitle">Площадь строительства</p>
+                    <p class="details__info-num">142 м2</p>
+                  </div>
+                </div>
+                <p class="details__info-subtitle details__info-subtitle--mb">В стоимость входит</p>
+                <div class="details__info-box details__info-box--alt">
+                  <div class="details__info-item">
+                    <i class="details__info-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.88 7.168L11.264 3.552L11.936 2.88H19.168L14.88 7.168ZM21.664 27.552L29.12 20.064V12.832L18.048 23.936L21.664 27.552ZM26.624 6.272L20.288 12.608L23.904 16.224L29.12 11.04V3.776L26.624 6.272ZM9.888 3.104L10.112 2.88H3.52C3.168 2.88 2.88 3.168 2.88 3.52V10.112L3.104 9.888L9.888 3.104ZM10.336 4.448L2.88 11.936V19.168L13.952 8.096L10.336 4.448ZM8.768 22.336L11.712 19.392L8.064 15.776L2.88 20.96V28.192L5.376 25.696L8.768 22.336ZM22.112 28.896L21.888 29.12H28.48C28.832 29.12 29.12 28.832 29.12 28.48V21.888L28.896 22.112L22.112 28.896ZM8.992 14.88L12.608 18.496L25.28 5.824L22.336 2.88H20.96L15.328 8.544L8.992 14.88ZM23.008 17.12L19.392 13.504L13.056 19.84L9.664 23.232L6.72 26.176L9.664 29.12H11.04L16.704 23.456L23.008 17.12ZM12.832 29.12H20.064L20.736 28.448L17.12 24.832L12.832 29.12ZM3.776 29.12H7.84L5.792 27.072L3.776 29.12ZM28.224 2.88H24.16L26.208 4.896L28.224 2.88Z"
+                          fill="#7EC637" />
+                      </svg>
+                    </i>
+                    <p class="details__info-text">
+                      тёплые полы везде,
+                      кроме спален
+                    </p>
+                  </div>
+                  <div class="details__info-item">
+                    <i class="details__info-icon">
+                      <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_96_182)">
+                          <path
+                            d="M31.9667 21.3333H29.3V6.4C29.3 5.22347 28.3432 4.26667 27.1667 4.26667C26.1757 4.26667 25.348 4.94933 25.1091 5.86667H23.8909C23.652 4.94933 22.8243 4.26667 21.8333 4.26667C20.8424 4.26667 20.0147 4.94933 19.7757 5.86667H18.5576C18.3187 4.94933 17.4909 4.26667 16.5 4.26667C15.5091 4.26667 14.6813 4.94933 14.4424 5.86667H13.2243C12.9853 4.94933 12.1576 4.26667 11.1667 4.26667C10.1757 4.26667 9.348 4.94933 9.10907 5.86667H7.89093C7.652 4.94933 6.82427 4.26667 5.83333 4.26667C4.6568 4.26667 3.7 5.22347 3.7 6.4H1.03333C0.891885 6.4 0.756229 6.45619 0.65621 6.55621C0.55619 6.65623 0.5 6.79188 0.5 6.93333L0.5 10.1333C0.5 10.2748 0.55619 10.4104 0.65621 10.5105C0.756229 10.6105 0.891885 10.6667 1.03333 10.6667H3.7V25.6C3.7 26.7765 4.6568 27.7333 5.83333 27.7333C7.00987 27.7333 7.96667 26.7765 7.96667 25.6H9.03333C9.03333 26.7765 9.99013 27.7333 11.1667 27.7333C12.3432 27.7333 13.3 26.7765 13.3 25.6H14.3667C14.3667 26.7765 15.3235 27.7333 16.5 27.7333C17.6765 27.7333 18.6333 26.7765 18.6333 25.6H19.7C19.7 26.7765 20.6568 27.7333 21.8333 27.7333C23.0099 27.7333 23.9667 26.7765 23.9667 25.6H25.0333C25.0333 26.7765 25.9901 27.7333 27.1667 27.7333C28.3432 27.7333 29.3 26.7765 29.3 25.6H31.9667C32.1081 25.6 32.2438 25.5438 32.3438 25.4438C32.4438 25.3438 32.5 25.2081 32.5 25.0667V21.8667C32.5 21.7252 32.4438 21.5896 32.3438 21.4895C32.2438 21.3895 32.1081 21.3333 31.9667 21.3333ZM13.3 10.1333H14.3667V21.3333H13.3V10.1333ZM18.6333 10.1333H19.7V21.3333H18.6333V10.1333ZM23.9667 10.1333H25.0333V21.3333H23.9667V10.1333ZM7.96667 10.1333H9.03333V21.3333H7.96667V10.1333Z"
+                            fill="#7EC637" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_96_182">
+                            <rect width="32" height="32" fill="white" transform="translate(0.5)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </i>
+                    <p class="details__info-text">
+                      радиаторы отопленияв спальнях
+                    </p>
+                  </div>
+                  <div class="details__info-item">
+                    <i class="details__info-icon">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22.075 0.5H9.92502C7.49502 0.5 5.52502 2.47 5.52502 4.9V23.41C5.52502 25.32 6.75002 26.945 8.45002 27.55C8.76502 28.695 9.71502 29.575 10.9 29.78V31.495H13.505V29.83H18.49V31.495H21.095V29.78C22.28 29.57 23.23 28.695 23.545 27.55C25.25 26.945 26.47 25.32 26.47 23.41V4.9C26.47 2.47 24.5 0.5 22.07 0.5H22.075ZM15.495 26.91C14.87 26.745 14.365 26.235 14.2 25.615C13.93 24.58 14.52 23.65 15.405 23.345V24.635C15.405 24.965 15.67 25.23 16 25.23C16.33 25.23 16.595 24.965 16.595 24.635V23.345C17.33 23.595 17.865 24.285 17.865 25.105C17.865 26.3 16.74 27.235 15.49 26.905L15.495 26.91ZM21.97 20.485H10.03V8.735C10.03 7.4 11.11 6.32 12.445 6.32H19.545C20.88 6.32 21.96 7.4 21.96 8.735V20.485H21.97Z"
+                          fill="#7EC637" />
+                        <path
+                          d="M19.285 14.125C19.175 12.99 18.695 11.915 18.055 10.97C17.415 10.025 16.62 9.2 15.81 8.395C15.995 9.125 16.13 9.87 16.11 10.62C16.085 11.37 15.895 12.13 15.465 12.745C15.285 11.705 14.69 10.745 13.84 10.12C14.125 12.745 12.78 13.465 12.695 15.33C12.65 16.32 13.095 17.3 13.875 17.91C14.175 18.145 14.51 18.305 14.86 18.41C14.67 17.735 14.545 16.295 16.355 15.04C16.355 15.04 17.055 16.73 16.82 18.36C17.42 18.165 17.965 17.81 18.375 17.325C19.11 16.455 19.395 15.255 19.285 14.12V14.125Z"
+                          fill="#7EC637" />
+                      </svg>
+                    </i>
+                    <p class="details__info-text">
+                      двухконтурный
+                      газовый котел
+                    </p>
+                  </div>
+                </div>
+                <div class="details__info-bot">
+                  <p class="details__info-subtitle">
+                    Хотите обсудить проект?
+                  </p>
+                  <p class="details__info-text">
+                    Свяжитесь с нами по телефону или в мессенджерах
+                  </p>
+                  <div class="details__info-flex">
+                    <a class="phone" href="mailto:+75555555555">
+                      <i class="phone__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M17.3085 14.6839L15.578 15.6588C15.3704 15.7757 15.1301 15.8214 14.894 15.789C14.6579 15.7566 14.4389 15.6478 14.2705 15.4792L8.49473 9.70346C8.32628 9.53492 8.21756 9.31592 8.18514 9.07985C8.15272 8.84378 8.19837 8.60359 8.31515 8.39587L9.29004 6.66539C9.46553 6.35394 9.53423 5.9936 9.48567 5.63943C9.4371 5.28526 9.27393 4.95672 9.02108 4.70401L6.42742 2.11035C6.27541 1.95826 6.09491 1.83761 5.89626 1.7553C5.6976 1.67298 5.48467 1.63062 5.26963 1.63062C5.05459 1.63062 4.84166 1.67298 4.64301 1.7553C4.44435 1.83761 4.26385 1.95826 4.11184 2.11035L2.93418 3.28718C2.24553 3.97583 1.80687 4.87494 1.68795 5.84155C1.56904 6.80816 1.77669 7.78678 2.27791 8.6218L2.8688 9.60663C5.88638 14.6358 10.1456 18.8053 15.2379 21.715L15.3546 21.7821C17.0942 22.776 19.2434 22.4864 20.6363 21.0944L21.866 19.8646C22.0181 19.7125 22.1388 19.5321 22.2211 19.3334C22.3034 19.1347 22.3458 18.9218 22.3458 18.7068C22.3458 18.4917 22.3034 18.2788 22.2211 18.0801C22.1388 17.8815 22.0181 17.701 21.866 17.549L19.2707 14.9537C19.0181 14.7005 18.6894 14.537 18.3351 14.4883C17.9807 14.4396 17.6202 14.5083 17.3085 14.6839Z"
+                            fill="#CFBCB5" />
+                        </svg>
+                      </i>
+                      +7 555 555-55-55
+                    </a>
+                    <div class="socials">
+                      <a href="#" class="socials__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M17.4899 8.51627C18.226 7.80289 18.9567 6.13835 15.8898 8.15958C13.0248 10.0705 10.1404 11.954 7.23707 13.8097C6.79496 14.0035 6.31699 14.1086 5.83189 14.1188C5.34679 14.1291 4.86456 14.0441 4.41417 13.8692C2.57402 13.3341 0.425847 12.6208 0.425847 12.6208C0.425847 12.6208 -1.04094 11.7277 1.46993 10.7766C1.46993 10.7766 12.0855 6.55448 15.7671 5.06699C17.1779 4.47251 21.9636 2.57017 21.9636 2.57017C21.9636 2.57017 24.1731 1.73661 23.9891 3.75913C23.9278 4.59141 23.4371 7.50694 22.9464 10.6577C22.209 15.1176 21.4116 19.9949 21.4116 19.9949C21.4116 19.9949 21.2889 21.3622 20.2461 21.6C19.1299 21.5817 18.0514 21.2054 17.1792 20.5299C16.9339 20.3516 12.5775 17.6751 10.9814 16.3673C10.819 16.2607 10.6871 16.116 10.5979 15.9467C10.5087 15.7775 10.4652 15.5891 10.4713 15.3991C10.4774 15.2091 10.533 15.0237 10.6329 14.8602C10.7328 14.6966 10.8738 14.5602 11.0427 14.4636C13.2319 12.5224 15.3814 10.5396 17.4899 8.51627Z"
+                            fill="#CFBCB5" />
+                        </svg>
+                      </a>
+                      <a href="#" class="socials__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1_222)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M5.40243 22.0132C7.30604 23.2611 9.56688 24 12.0053 24C18.6178 24 24 18.5989 24 11.98C24 11.6904 24 11.3709 23.9801 11.0516C23.4947 4.8818 18.31 0 12.0053 0C5.79943 0 0.664243 4.75197 0.0792683 10.8319C0.0296466 11.2213 0 11.5906 0 11.98C0 14.6056 0.852726 17.0616 2.29022 19.0182L0.803075 23.4809L5.40243 22.0132ZM15.8258 13.6558C15.842 13.6603 15.8584 13.665 15.8752 13.6696C15.8752 13.6718 15.9916 13.7305 16.1778 13.8246C16.907 14.1929 18.708 15.1027 18.7992 15.276C18.8953 15.4313 18.8953 16.1673 18.6178 17.0066C18.3312 17.8771 16.9457 18.6858 16.3432 18.7373C16.237 18.7463 16.1493 18.7684 16.0588 18.7912C15.6276 18.8999 15.133 19.0246 12.2819 17.8256C9.0492 16.4581 6.94448 13.029 6.57708 12.4304C6.55463 12.3938 6.53866 12.3678 6.52933 12.3535C6.52111 12.3409 6.50971 12.324 6.49548 12.3028C6.3099 12.027 5.64473 11.0384 5.33429 9.83514C5.21983 9.45173 5.14292 9.01635 5.14292 8.61218C5.14292 6.59141 6.02199 5.15087 7.89558 5.15087C7.9172 5.15087 7.94032 5.1491 7.96474 5.14723C8.14513 5.13342 8.39662 5.11417 8.64099 5.76229C8.89176 6.38799 9.44262 7.84677 9.62121 8.31973C9.64673 8.38731 9.66465 8.43476 9.673 8.45678C9.76827 8.63297 9.81587 8.84022 9.70141 9.08898C9.57626 9.36395 9.37297 9.62249 9.17906 9.86909C8.83949 10.3009 8.52872 10.6962 8.717 11.0788C8.89922 11.4311 9.58692 12.6022 10.5906 13.5764C11.7049 14.6505 12.6622 15.083 13.1302 15.2944C13.2041 15.3278 13.2657 15.3557 13.3139 15.3797C14.0008 15.7522 14.7058 14.5399 15.0611 13.929C15.0715 13.9111 15.0816 13.8938 15.0913 13.877C15.3184 13.5127 15.519 13.5692 15.8258 13.6558Z"
+                              fill="#CFBCB5" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1_222">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="details__layout">
+              <h2 class="details__layout-title title title--small">
+                Планировка
+              </h2>
+              <div class="details__layout-box">
+                <div class="details__layout-item">
+                  <p class="details__layout-subtitle">
+                    Первый этаж
+                  </p>
+                  <a data-fancybox="layout" href="../assets/images/details/2.png">
+                    <img class="details__layout-img" src="../assets/images/details/2.png" alt="">
+                  </a>
+                </div>
+                <div class="details__layout-item">
+                  <p class="details__layout-subtitle">
+                    Второй этаж
+                  </p>
+                  <a data-fancybox="layout" href="../assets/images/details/3.png">
+                    <img class="details__layout-img" src="../assets/images/details/3.png" alt="">
+                  </a>
+                </div>
+                <div class="details__layout-item">
+                  <p class="details__layout-subtitle">
+                    Третий этаж
+                  </p>
+                  <a data-fancybox="layout" href="../assets/images/details/4.png">
+                    <img class="details__layout-img" src="../assets/images/details/4.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="calc">
+        <div class="calc__wrapper">
+          <div class="container">
+            <div class="calc__inner">
+              <h2 class="calc__title title title--small">Рассчитать <span>ипотеку</span></h2>
+              <p class="calc__subtitle">
+                Текст про ипотеку, удобная, красивая, замечательная.
+                <br>
+                Вторая строка текста
+              </p>
+              <div class="calc__box">
+                <div class="calc__elem">
+                  <div class="calc__item">
+                    <p class="calc__item-title">Сумма ипотеки</p>
+                    <div class="calc__item-box">
+                      <div class="calc__item-text calc-step-value"></div>
+                      <div class="calc-step"></div>
+                    </div>
+                  </div>
+                  <div class="calc__item">
+                    <p class="calc__item-title">Срок ипотеки</p>
+                    <div class="calc__item-box calc__item-box--year">
+                      <div class="calc__item-text calc-year-value"></div>
+                      <div class="calc-year"></div>
+                    </div>
+                  </div>
+                  <div class="calc__item">
+                    <p class="calc__item-title">Ставка</p>
+                    <div class="calc__item-box calc__item-box--year">
+                      <div class="calc__item-text calc-bid-value"></div>
+                      <div class="calc-bid"></div>
+                    </div>
+                  </div>
+                  <p class="calc__item-info">
+                    Рассчёт предварительный, по средней ставке. Точная ставка и сумма ипотеки будут определены
+                    при оформлении договора. Банк вправе отказать в выдаче ипотеки без объяснения причин.
+                  </p>
+                </div>
+                <div class="calc__info">
+                  <div class="calc__info-top">
+                    <p class="calc__info-subtitle">
+                      Ежемесячный платёж
+                    </p>
+                    <p class="calc__info-payment">
+                      32 345 ₽
+                    </p>
+                  </div>
+                  <div class="calc__info-box">
+                    <a href="#">
+                      <img class="calc__info-img" src="../assets/images/calc/1.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img class="calc__info-img" src="../assets/images/calc/2.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img class="calc__info-img" src="../assets/images/calc/3.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img class="calc__info-img" src="../assets/images/calc/4.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img class="calc__info-img" src="../assets/images/calc/5.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img class="calc__info-img" src="../assets/images/calc/6.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="calc__info-bot">
+                    <p class="calc__info-subtitle">
+                      Нужна консультация?
+                    </p>
+                    <p class="calc__info-text">
+                      Свяжитесь с нами
+                    </p>
+                    <div class="calc__info-flex">
+                      <a class="phone" href="mailto:+75555555555">
+                        <i class="phone__icon">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.3085 14.6839L15.578 15.6588C15.3704 15.7757 15.1301 15.8214 14.894 15.789C14.6579 15.7566 14.4389 15.6478 14.2705 15.4792L8.49473 9.70346C8.32628 9.53492 8.21756 9.31592 8.18514 9.07985C8.15272 8.84378 8.19837 8.60359 8.31515 8.39587L9.29004 6.66539C9.46553 6.35394 9.53423 5.9936 9.48567 5.63943C9.4371 5.28526 9.27393 4.95672 9.02108 4.70401L6.42742 2.11035C6.27541 1.95826 6.09491 1.83761 5.89626 1.7553C5.6976 1.67298 5.48467 1.63062 5.26963 1.63062C5.05459 1.63062 4.84166 1.67298 4.64301 1.7553C4.44435 1.83761 4.26385 1.95826 4.11184 2.11035L2.93418 3.28718C2.24553 3.97583 1.80687 4.87494 1.68795 5.84155C1.56904 6.80816 1.77669 7.78678 2.27791 8.6218L2.8688 9.60663C5.88638 14.6358 10.1456 18.8053 15.2379 21.715L15.3546 21.7821C17.0942 22.776 19.2434 22.4864 20.6363 21.0944L21.866 19.8646C22.0181 19.7125 22.1388 19.5321 22.2211 19.3334C22.3034 19.1347 22.3458 18.9218 22.3458 18.7068C22.3458 18.4917 22.3034 18.2788 22.2211 18.0801C22.1388 17.8815 22.0181 17.701 21.866 17.549L19.2707 14.9537C19.0181 14.7005 18.6894 14.537 18.3351 14.4883C17.9807 14.4396 17.6202 14.5083 17.3085 14.6839Z"
+                              fill="#CFBCB5" />
+                          </svg>
+                        </i>
+                        +7 555 555-55-55
+                      </a>
+                      <div class="socials">
+                        <a href="#" class="socials__icon">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.4899 8.51627C18.226 7.80289 18.9567 6.13835 15.8898 8.15958C13.0248 10.0705 10.1404 11.954 7.23707 13.8097C6.79496 14.0035 6.31699 14.1086 5.83189 14.1188C5.34679 14.1291 4.86456 14.0441 4.41417 13.8692C2.57402 13.3341 0.425847 12.6208 0.425847 12.6208C0.425847 12.6208 -1.04094 11.7277 1.46993 10.7766C1.46993 10.7766 12.0855 6.55448 15.7671 5.06699C17.1779 4.47251 21.9636 2.57017 21.9636 2.57017C21.9636 2.57017 24.1731 1.73661 23.9891 3.75913C23.9278 4.59141 23.4371 7.50694 22.9464 10.6577C22.209 15.1176 21.4116 19.9949 21.4116 19.9949C21.4116 19.9949 21.2889 21.3622 20.2461 21.6C19.1299 21.5817 18.0514 21.2054 17.1792 20.5299C16.9339 20.3516 12.5775 17.6751 10.9814 16.3673C10.819 16.2607 10.6871 16.116 10.5979 15.9467C10.5087 15.7775 10.4652 15.5891 10.4713 15.3991C10.4774 15.2091 10.533 15.0237 10.6329 14.8602C10.7328 14.6966 10.8738 14.5602 11.0427 14.4636C13.2319 12.5224 15.3814 10.5396 17.4899 8.51627Z"
+                              fill="#CFBCB5" />
+                          </svg>
+                        </a>
+                        <a href="#" class="socials__icon">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_222)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.40243 22.0132C7.30604 23.2611 9.56688 24 12.0053 24C18.6178 24 24 18.5989 24 11.98C24 11.6904 24 11.3709 23.9801 11.0516C23.4947 4.8818 18.31 0 12.0053 0C5.79943 0 0.664243 4.75197 0.0792683 10.8319C0.0296466 11.2213 0 11.5906 0 11.98C0 14.6056 0.852726 17.0616 2.29022 19.0182L0.803075 23.4809L5.40243 22.0132ZM15.8258 13.6558C15.842 13.6603 15.8584 13.665 15.8752 13.6696C15.8752 13.6718 15.9916 13.7305 16.1778 13.8246C16.907 14.1929 18.708 15.1027 18.7992 15.276C18.8953 15.4313 18.8953 16.1673 18.6178 17.0066C18.3312 17.8771 16.9457 18.6858 16.3432 18.7373C16.237 18.7463 16.1493 18.7684 16.0588 18.7912C15.6276 18.8999 15.133 19.0246 12.2819 17.8256C9.0492 16.4581 6.94448 13.029 6.57708 12.4304C6.55463 12.3938 6.53866 12.3678 6.52933 12.3535C6.52111 12.3409 6.50971 12.324 6.49548 12.3028C6.3099 12.027 5.64473 11.0384 5.33429 9.83514C5.21983 9.45173 5.14292 9.01635 5.14292 8.61218C5.14292 6.59141 6.02199 5.15087 7.89558 5.15087C7.9172 5.15087 7.94032 5.1491 7.96474 5.14723C8.14513 5.13342 8.39662 5.11417 8.64099 5.76229C8.89176 6.38799 9.44262 7.84677 9.62121 8.31973C9.64673 8.38731 9.66465 8.43476 9.673 8.45678C9.76827 8.63297 9.81587 8.84022 9.70141 9.08898C9.57626 9.36395 9.37297 9.62249 9.17906 9.86909C8.83949 10.3009 8.52872 10.6962 8.717 11.0788C8.89922 11.4311 9.58692 12.6022 10.5906 13.5764C11.7049 14.6505 12.6622 15.083 13.1302 15.2944C13.2041 15.3278 13.2657 15.3557 13.3139 15.3797C14.0008 15.7522 14.7058 14.5399 15.0611 13.929C15.0715 13.9111 15.0816 13.8938 15.0913 13.877C15.3184 13.5127 15.519 13.5692 15.8258 13.6558Z"
+                                fill="#CFBCB5" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1_222">
+                                <rect width="24" height="24" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="gallery">
+        <div class="gallery__wrapper">
+          <div class="container">
+            <h2 class="gallery__title title title--center">
+              <span>Галерея</span> проекта
+            </h2>
+            <div class="gallery__inner">
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/1.png">
+                <img class="card__img" src="../assets/images/projects/1.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/2.png">
+                <img class="card__img" src="../assets/images/projects/2.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/3.png">
+                <img class="card__img" src="../assets/images/projects/3.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/4.png">
+                <img class="card__img" src="../assets/images/projects/4.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/1.png">
+                <img class="card__img" src="../assets/images/projects/1.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/2.png">
+                <img class="card__img" src="../assets/images/projects/2.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/3.png">
+                <img class="card__img" src="../assets/images/projects/3.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/4.png">
+                <img class="card__img" src="../assets/images/projects/4.png" alt="">
+              </a>
+              <a class="card" data-fancybox="gallery" href="../assets/images/projects/1.png">
+                <img class="card__img" src="../assets/images/projects/1.png" alt="">
+              </a>
+            </div>
+            <div class="team__swiper-pagination swiper-pagination"></div>
+            <a class="btn btn--center" href="#">
+              Посмотреть все проекты
+              <i class="btn__icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="url(#paint0_linear_2001_36)" />
+                  <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#67AC22" />
+                  <path
+                    d="M27 18.4671C28.3333 19.2369 28.3333 21.1614 27 21.9312L18 27.1273C16.6667 27.8971 15 26.9349 15 25.3953L15 15.003C15 13.4634 16.6667 12.5011 18 13.2709L27 18.4671Z"
+                    fill="white" />
+                  <defs>
+                    <linearGradient id="paint0_linear_2001_36" x1="20" y1="0" x2="20" y2="40"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#5D9E1B" />
+                      <stop offset="1" stop-color="#5D9E1B" stop-opacity="0.2" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+      <div class="container">
+        <img class="footer__bg" src="../assets/images/footer/1.png" alt="">
+        <div class="footer__inner">
+          <div class="footer__column">
+            <p class="elem elem--left">
+              Как заказать?
+            </p>
+            <h2 class="footer__title title title--small title--white">
+              Оставьте <span>заявку</span>
+            </h2>
+            <p class="footer__subtitle">
+              Закажите строительтво дома!
+              <br>
+              Оставьте заявку и получите бесплатный расчёт стоимости Вашего дома!
+            </p>
+          </div>
+          <div class="footer__item">
+            <form class="form" action="">
+              <div class="form__box">
+                <label class="form__label">
+                  <span class="form__label-title">Ваше имя</span>
+                  <input class="form__label-input" type="text">
+                </label>
+                <label class="form__label">
+                  <span class="form__label-title">Ваш телефон</span>
+                  <input class="form__label-input" type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                </label>
+              </div>
+              <div class="form__flex">
+                <a class="btn btn--small" href="#">
+                  Оставить заявку
+                </a>
+                <label class="label">
+                  <input class="label__input check" type="checkbox">
+                  <span class="label__inputCustom">
+                    <i class="label__inputCustom-icon">
+                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8 1.38966L6.80725 0.199997L3.57825 3.42036L1.19275 1.04123L0 2.2309L3.57825 5.8L8 1.38966Z"
+                          fill="#ffffff" />
+                      </svg>
+                    </i>
+                  </span>
+                  <span class="label__text">
+                    Я согласен на обработку моих персональных данных и с условиями <a href="#">
+                      политики конфиденциальности.
+                  </span>
+                  </a>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <p class="footer__copy">
+          © 2024, Компания «ДоманСтрой». Все права защищены.
+        </p>
+      </div>
+    </footer>
+
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>

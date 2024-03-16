@@ -1,0 +1,117 @@
+.about {
+  &__wrapper {
+    position: relative;
+    @include fluid(padding-top, 50px, 90px);
+    @include fluid(padding-bottom, 200px, 345px);
+    overflow: hidden;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__bushLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include fluid(height, 500px, 722px);
+    width: unset;
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    @include fluid(bottom, 0px, -15px);
+  }
+
+  &__bushRight {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @include fluid(height, 350px, 485px);
+    width: unset;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr .67fr;
+    align-items: center;
+    @include fluid(gap, 15px, 30px);
+  }
+
+  &__elemBot {
+    position: absolute;
+    left: 60%;
+    transform: rotate(-5deg) translateX(-50%);
+    bottom: 20px;
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 20px, 60px);
+  }
+
+  &__subtitle {
+    @include fluid(font-size, 18px, 24px);
+    color: #fff;
+    @include fluid(margin-bottom, 20px, 60px);
+  }
+
+  &__text {
+    color: #fff;
+    @include fluid(margin-bottom, 15px, 20px);
+  }
+
+  &__picture {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fluid(padding-top, 50px, 80px);
+    @include fluid(padding-bottom, 50px, 80px);
+
+    &-img {
+      position: relative;
+      z-index: 2;
+      @include fluid(height, 400px, 500px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      @include fluid(right, -100px, -180px);
+      top: 50%;
+      transform: translateY(-50%);
+      @include fluid(width, 400px, 650px);
+      @include fluid(height, 400px, 650px);
+      background-color: #485B6D;
+      border-radius: 50%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include fluid(width, 80px, 111px);
+      @include fluid(height, 80px, 111px);
+      border-radius: 50%;
+      background: linear-gradient(129.68deg, rgb(192, 198, 206) 6.068%, rgb(148, 164, 180) 87.378%);
+      z-index: 1;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .about {
+    &__inner {
+      position: relative;
+      grid-template-columns: 1fr;
+    }
+
+    &__picture {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+}

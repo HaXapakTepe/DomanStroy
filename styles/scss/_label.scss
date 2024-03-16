@@ -1,0 +1,62 @@
+.check {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.label {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+
+  &__input {
+    &:checked+.label__inputCustom {
+      background-color: #64A821;
+      border-color: #7EC637;
+
+      .label__inputCustom-icon {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
+  &__inputCustom {
+    position: relative;
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #7EC637;
+    transition: background-color 0.23s ease-in-out,
+      border-color 0.23s ease-in-out;
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 8px;
+      height: 6px;
+      transition: transform 0.23s ease-in-out;
+    }
+  }
+
+  a {
+    color: #7EC637;
+  }
+}

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/images/favicon.svg" type="x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="../styles/css/normalize.css">
+  <link rel="stylesheet" href="../styles/css/style.css?v=0.0001">
+  <title>Наши проекты</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <a class="logo" href="#">
+            <img class="logo__img" src="../assets/images/logo.svg" alt="">
+          </a>
+          <div class="header__loca" href="#">
+            <i class="header__loca-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.0003 1.6666C6.77949 1.6666 4.16699 4.2791 4.16699 7.49993C4.16699 11.8749 10.0003 18.3333 10.0003 18.3333C10.0003 18.3333 15.8337 11.8749 15.8337 7.49993C15.8337 4.2791 13.2212 1.6666 10.0003 1.6666ZM10.0003 9.58326C8.85032 9.58326 7.91699 8.64993 7.91699 7.49993C7.91699 6.34993 8.85032 5.4166 10.0003 5.4166C11.1503 5.4166 12.0837 6.34993 12.0837 7.49993C12.0837 8.64993 11.1503 9.58326 10.0003 9.58326Z"
+                  fill="#CFBCB5" />
+              </svg>
+            </i>
+            <div class="header__loca-box">
+              <select class="header__loca-select" name="loca">
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+                <option value="Ростов-на дону">Ростов-на дону</option>
+                <option value="Москва">Москва</option>
+              </select>
+            </div>
+          </div>
+          <a class="phone" href="mailto:+75555555555">
+            <i class="phone__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.3085 14.6839L15.578 15.6588C15.3704 15.7757 15.1301 15.8214 14.894 15.789C14.6579 15.7566 14.4389 15.6478 14.2705 15.4792L8.49473 9.70346C8.32628 9.53492 8.21756 9.31592 8.18514 9.07985C8.15272 8.84378 8.19837 8.60359 8.31515 8.39587L9.29004 6.66539C9.46553 6.35394 9.53423 5.9936 9.48567 5.63943C9.4371 5.28526 9.27393 4.95672 9.02108 4.70401L6.42742 2.11035C6.27541 1.95826 6.09491 1.83761 5.89626 1.7553C5.6976 1.67298 5.48467 1.63062 5.26963 1.63062C5.05459 1.63062 4.84166 1.67298 4.64301 1.7553C4.44435 1.83761 4.26385 1.95826 4.11184 2.11035L2.93418 3.28718C2.24553 3.97583 1.80687 4.87494 1.68795 5.84155C1.56904 6.80816 1.77669 7.78678 2.27791 8.6218L2.8688 9.60663C5.88638 14.6358 10.1456 18.8053 15.2379 21.715L15.3546 21.7821C17.0942 22.776 19.2434 22.4864 20.6363 21.0944L21.866 19.8646C22.0181 19.7125 22.1388 19.5321 22.2211 19.3334C22.3034 19.1347 22.3458 18.9218 22.3458 18.7068C22.3458 18.4917 22.3034 18.2788 22.2211 18.0801C22.1388 17.8815 22.0181 17.701 21.866 17.549L19.2707 14.9537C19.0181 14.7005 18.6894 14.537 18.3351 14.4883C17.9807 14.4396 17.6202 14.5083 17.3085 14.6839Z"
+                  fill="#CFBCB5" />
+              </svg>
+            </i>
+            +7 555 555-55-55
+          </a>
+          <div class="socials">
+            <a href="#" class="socials__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.4899 8.51627C18.226 7.80289 18.9567 6.13835 15.8898 8.15958C13.0248 10.0705 10.1404 11.954 7.23707 13.8097C6.79496 14.0035 6.31699 14.1086 5.83189 14.1188C5.34679 14.1291 4.86456 14.0441 4.41417 13.8692C2.57402 13.3341 0.425847 12.6208 0.425847 12.6208C0.425847 12.6208 -1.04094 11.7277 1.46993 10.7766C1.46993 10.7766 12.0855 6.55448 15.7671 5.06699C17.1779 4.47251 21.9636 2.57017 21.9636 2.57017C21.9636 2.57017 24.1731 1.73661 23.9891 3.75913C23.9278 4.59141 23.4371 7.50694 22.9464 10.6577C22.209 15.1176 21.4116 19.9949 21.4116 19.9949C21.4116 19.9949 21.2889 21.3622 20.2461 21.6C19.1299 21.5817 18.0514 21.2054 17.1792 20.5299C16.9339 20.3516 12.5775 17.6751 10.9814 16.3673C10.819 16.2607 10.6871 16.116 10.5979 15.9467C10.5087 15.7775 10.4652 15.5891 10.4713 15.3991C10.4774 15.2091 10.533 15.0237 10.6329 14.8602C10.7328 14.6966 10.8738 14.5602 11.0427 14.4636C13.2319 12.5224 15.3814 10.5396 17.4899 8.51627Z"
+                  fill="#CFBCB5" />
+              </svg>
+            </a>
+            <a href="#" class="socials__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_222)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.40243 22.0132C7.30604 23.2611 9.56688 24 12.0053 24C18.6178 24 24 18.5989 24 11.98C24 11.6904 24 11.3709 23.9801 11.0516C23.4947 4.8818 18.31 0 12.0053 0C5.79943 0 0.664243 4.75197 0.0792683 10.8319C0.0296466 11.2213 0 11.5906 0 11.98C0 14.6056 0.852726 17.0616 2.29022 19.0182L0.803075 23.4809L5.40243 22.0132ZM15.8258 13.6558C15.842 13.6603 15.8584 13.665 15.8752 13.6696C15.8752 13.6718 15.9916 13.7305 16.1778 13.8246C16.907 14.1929 18.708 15.1027 18.7992 15.276C18.8953 15.4313 18.8953 16.1673 18.6178 17.0066C18.3312 17.8771 16.9457 18.6858 16.3432 18.7373C16.237 18.7463 16.1493 18.7684 16.0588 18.7912C15.6276 18.8999 15.133 19.0246 12.2819 17.8256C9.0492 16.4581 6.94448 13.029 6.57708 12.4304C6.55463 12.3938 6.53866 12.3678 6.52933 12.3535C6.52111 12.3409 6.50971 12.324 6.49548 12.3028C6.3099 12.027 5.64473 11.0384 5.33429 9.83514C5.21983 9.45173 5.14292 9.01635 5.14292 8.61218C5.14292 6.59141 6.02199 5.15087 7.89558 5.15087C7.9172 5.15087 7.94032 5.1491 7.96474 5.14723C8.14513 5.13342 8.39662 5.11417 8.64099 5.76229C8.89176 6.38799 9.44262 7.84677 9.62121 8.31973C9.64673 8.38731 9.66465 8.43476 9.673 8.45678C9.76827 8.63297 9.81587 8.84022 9.70141 9.08898C9.57626 9.36395 9.37297 9.62249 9.17906 9.86909C8.83949 10.3009 8.52872 10.6962 8.717 11.0788C8.89922 11.4311 9.58692 12.6022 10.5906 13.5764C11.7049 14.6505 12.6622 15.083 13.1302 15.2944C13.2041 15.3278 13.2657 15.3557 13.3139 15.3797C14.0008 15.7522 14.7058 14.5399 15.0611 13.929C15.0715 13.9111 15.0816 13.8938 15.0913 13.877C15.3184 13.5127 15.519 13.5692 15.8258 13.6558Z"
+                    fill="#CFBCB5" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_222">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="header__inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item menu__item--hidden">
+                <div class="menu__close"></div>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Заготовки
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Искусственный интеллект
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Каталог
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Фото и Видео
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger">
+            <div class="burger__line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <div class="bg bg--alt">
+        <img class="bg__img" src="../assets/images/bg-1.png" alt="">
+
+        <section class="breadcrumbs">
+          <div class="breadcrumbs__wrapper">
+            <div class="container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">
+                    Главная
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link breadcrumbs__link--active" href="#">
+                    О компании
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="company">
+          <div class="company__wrapper">
+            <div class="container">
+              <h2 class="company__title title title--big title--white">
+                Наши проекты
+              </h2>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+      <section class="projects">
+        <div class="projects__wrapper projects__wrapper--alt">
+          <div class="container">
+            <div class="projects__inner">
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/1.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/2.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/3.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/4.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/1.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/2.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/3.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/4.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/1.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/2.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/3.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+              <a class="card" href="#">
+                <div class="card__top">
+                  <p class="card__title">
+                    Проект № 81
+                  </p>
+                  <p class="card__square">
+                    120 м2
+                  </p>
+                </div>
+                <div class="card__box">
+                  <img class="card__icon" src="../assets/images/icons/search.svg" alt="">
+                  <img class="card__img" src="../assets/images/projects/4.png" alt="">
+                </div>
+                <p class="card__price">
+                  от 3 900 000 ₽
+                </p>
+              </a>
+            </div>
+            <a class="btn btn--small btn--center" href="#">
+              Показать ещё
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+      <div class="container">
+        <img class="footer__bg" src="../assets/images/footer/1.png" alt="">
+        <div class="footer__inner">
+          <div class="footer__column">
+            <p class="elem elem--left">
+              Как заказать?
+            </p>
+            <h2 class="footer__title title title--small title--white">
+              Оставьте <span>заявку</span>
+            </h2>
+            <p class="footer__subtitle">
+              Закажите строительтво дома!
+              <br>
+              Оставьте заявку и получите бесплатный расчёт стоимости Вашего дома!
+            </p>
+          </div>
+          <div class="footer__item">
+            <form class="form" action="">
+              <div class="form__box">
+                <label class="form__label">
+                  <span class="form__label-title">Ваше имя</span>
+                  <input class="form__label-input" type="text">
+                </label>
+                <label class="form__label">
+                  <span class="form__label-title">Ваш телефон</span>
+                  <input class="form__label-input" type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                </label>
+              </div>
+              <div class="form__flex">
+                <a class="btn btn--small" href="#">
+                  Оставить заявку
+                </a>
+                <label class="label">
+                  <input class="label__input check" type="checkbox">
+                  <span class="label__inputCustom">
+                    <i class="label__inputCustom-icon">
+                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8 1.38966L6.80725 0.199997L3.57825 3.42036L1.19275 1.04123L0 2.2309L3.57825 5.8L8 1.38966Z"
+                          fill="#ffffff" />
+                      </svg>
+                    </i>
+                  </span>
+                  <span class="label__text">
+                    Я согласен на обработку моих персональных данных и с условиями <a href="#">
+                      политики конфиденциальности.
+                  </span>
+                  </a>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <p class="footer__copy">
+          © 2024, Компания «ДоманСтрой». Все права защищены.
+        </p>
+      </div>
+    </footer>
+
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>

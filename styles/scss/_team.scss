@@ -1,0 +1,89 @@
+.team {
+  &__wrapper {
+    padding-top: 30px;
+    overflow: hidden
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 40px, 90px);
+  }
+
+  &__swiper {
+    overflow: visible;
+
+    &-wrapper {
+      @include fluid(margin-bottom, 40px, 90px);
+    }
+
+    &-pagination {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      @include fluid(margin-bottom, 40px, 90px);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        left: 0;
+        height: 4px;
+        border-radius: 25px;
+        background-color: #EBE3E0;
+        z-index: -2;
+      }
+
+      .swiper {
+        &-pagination {
+          &-bullet {
+            @include fluid(width, 15px, 20px);
+            @include fluid(height, 15px, 20px);
+            background-color: #7EC637;
+            opacity: 0;
+            transition: opacity 0.23s ease-in-out;
+
+            &-active {
+              position: relative;
+              background-color: #7EC637;
+              opacity: 1;
+
+              &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include fluid(width, 20px, 25px);
+                @include fluid(height, 20px, 25px);
+                border-radius: 50%;
+                background-color: #fff;
+                z-index: -1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__card {
+    &-img {
+      width: 100%;
+      @include fluid(height, 280px, 420px);
+      border-radius: 20px;
+      @include fluid(margin-bottom, 15px, 30px);
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    &-name {
+      @include fluid(font-size, 18px, 24px);
+    }
+
+    &-who {
+      @include fluid(font-size, 16px, 18px);
+      color: #B7A7A1;
+    }
+  }
+}
