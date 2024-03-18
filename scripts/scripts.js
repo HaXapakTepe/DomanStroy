@@ -301,4 +301,55 @@ $(document).ready(function () {
       swiper: swiper,
     },
   })
+
+  var points = [
+    [
+      '<div class="map-baloon"><p>г. Ростов-на-Дону, пр-т Михаила Нагибина, 38</p></div>',
+      '47.26437635192941',
+      '39.72169386836962',
+    ],
+  ]
+
+  if (document.querySelector('.map')) {
+    ymaps?.ready(function () {
+      var myCollection = new ymaps.GeoObjectCollection()
+
+      myMap = new ymaps.Map('mapYandex', {
+        center: [47.26437635192941, 39.72169386836962],
+        zoom: 16,
+        // controls: ['zoomControl', 'geolocationControl', 'trafficControl'],
+      })
+
+      if (innerWidth < 1024) {
+        myMap.behaviors.disable('scrollZoom')
+        myMap.behaviors.disable('drag')
+      }
+
+      for (i = 0; i < points.length; i++) {
+        var myPlacemark = new ymaps.Placemark(
+          [points[i][1], points[i][2]],
+          {
+            balloonContent: points[i][0],
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: '../assets/images/icons/loca-color.svg',
+            iconImageSize: [48, 48],
+          }
+        )
+        myCollection.add(myPlacemark)
+        myMap.geoObjects.add(myPlacemark)
+
+        myMap.events.add('click', function (e) {
+          myMap.balloon.close()
+        })
+      }
+
+      myMap.geoObjects.add(myCollection)
+
+      myPlacemark.events.add('click', function (event) {
+        event.preventDefault()
+      })
+    })
+  }
 })

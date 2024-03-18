@@ -22,6 +22,10 @@
     display: grid;
     grid-template-columns: 1fr .6fr;
     @include fluid(gap, 20px, 60px);
+
+    &:has(+*) {
+      @include fluid(margin-bottom, 20px, 60px);
+    }
   }
 
   &__title {
@@ -187,10 +191,45 @@
       @include fluid(margin-top, 5px, 10px);
     }
   }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include fluid(gap, 15px, 30px);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      @include fluid(gap, 15px, 30px);
+    }
+
+    &-text {
+      font-size: 14px;
+      color: #B7A7A1;
+      text-wrap: balance;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    counter-reset: num;
+
+    &-item {
+      font-size: 14px;
+
+      &::before {
+        content: counter(num)'.';
+        counter-increment: num;
+        margin-right: 3px;
+      }
+    }
+  }
 }
 
 @media(max-width: 992px) {
   .calc {
+
+    &__block,
     &__box {
       grid-template-columns: 1fr;
     }
@@ -201,6 +240,7 @@
       border-left: none;
       padding-top: 20px;
     }
+
   }
 }
 

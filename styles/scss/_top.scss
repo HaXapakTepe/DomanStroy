@@ -1,0 +1,18 @@
+.top {
+  &__title {
+    @include fluid(padding-bottom, 15px, 30px);
+
+    &:has(+*) {
+      @include fluid(margin-bottom, 15px, 30px);
+      padding-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    @include fluid(font-size, 18px, 24px);
+    color: #fff;
+    @include fluid(max-width, 570px, 750px);
+    @include fluid(padding-bottom, 30px, 60px);
+  }
+}
