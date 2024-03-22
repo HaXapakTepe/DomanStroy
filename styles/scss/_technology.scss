@@ -1,8 +1,4 @@
 .technology {
-  &__wrapper {
-    @include fluid(margin-top, 60px, 90px);
-  }
-
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

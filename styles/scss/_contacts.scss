@@ -1,8 +1,4 @@
 .contacts {
-  &__wrapper {
-    @include fluid(margin-top, 40px, 90px);
-  }
-
   &__title {
     @include fluid(margin-bottom, 20px, 60px);
   }

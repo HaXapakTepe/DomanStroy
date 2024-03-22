@@ -33,84 +33,47 @@ $(document).ready(function () {
     })
   }
 
-  function handleTabClick(tabs, pages, activeTabClass, activePageClass, opacityPageClass) {
-    tabs.forEach((tab, idx) => {
-      tab.addEventListener('click', () => {
-        tabs.forEach((tab) => tab.classList.remove(activeTabClass))
-        pages.forEach((page) => {
-          page.classList.remove(activePageClass)
-          page.classList.remove(opacityPageClass)
+  const headerElement = document.querySelector('.header')
+  const socials = document.querySelector('.socials--fixed')
+
+  window.addEventListener('scroll', () => {
+    const headerPosition = headerElement.getBoundingClientRect().bottom
+    const isHeaderHidden = headerPosition < 0
+
+    if (isHeaderHidden) {
+      socials.classList.add('socials--visible')
+      socials.classList.remove('socials--hidden')
+    } else {
+      socials.classList.remove('socials--visible')
+      socials.classList.add('socials--hidden')
+    }
+    // if (isHeaderHidden) {
+    //   socials.style.display = 'block'
+    // } else {
+    //   socials.style.display = 'none'
+    // }
+  })
+
+  const menuLinks = document.querySelectorAll('[class][data-goto]')
+
+  if (menuLinks.length > 0) {
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', onMenuLinkClick)
+    })
+
+    function onMenuLinkClick(e) {
+      const link = e.target
+      if (link.dataset.goto && document.querySelector(link.dataset.goto)) {
+        const gotoBlock = document.querySelector(link.dataset.goto)
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top
+        window.scrollBy({
+          top: gotoBlockValue,
+          behavior: 'smooth',
         })
-
-        tab.classList.add(activeTabClass)
-        pages[idx].classList.add(activePageClass)
-
-        setTimeout(() => {
-          pages[idx].classList.add(opacityPageClass)
-        }, 380)
-      })
-    })
+        e.preventDefault()
+      }
+    }
   }
-
-  const tabs = document.querySelectorAll('.tab__target')
-  const pages = document.querySelectorAll('.tab__info')
-
-  handleTabClick(tabs, pages, 'tab__target--active', 'tab__info--active', 'tab__info--opacity')
-
-  // const accordion = document.querySelectorAll('.accordion')
-  // accordion?.forEach((acc) => {
-  //   acc.addEventListener('click', (e) => {
-  //     e.preventDefault()
-  //     // const content = acc.querySelector('.accordion__content')
-  //     const content = acc.nextElementSibling
-  //     if (acc.classList.contains('accordion--active')) {
-  //       acc.classList.remove('accordion--active')
-  //       content.style.maxHeight = '0'
-  //     } else {
-  //       acc.classList.add('accordion--active')
-  //       content.style.maxHeight = content.scrollHeight + 'px'
-  //     }
-  //   })
-  // })
-  const accordions = document.querySelectorAll('.accordion')
-  const contents = document.querySelectorAll('.accordion-content')
-
-  accordions?.forEach((acc, index) => {
-    acc.addEventListener('click', (e) => {
-      e.preventDefault()
-
-      const content = contents[index]
-
-      if (acc.classList.contains('accordion--active')) {
-        acc.classList.remove('accordion--active')
-        content.style.maxHeight = '0'
-      } else {
-        acc.classList.add('accordion--active')
-        content.style.maxHeight = content.scrollHeight + 'px'
-      }
-    })
-  })
-
-  const count = document.querySelectorAll('.count')
-
-  count?.forEach((element) => {
-    element.addEventListener('click', function (event) {
-      const e = event.target
-      const num = element.querySelector('.count__num')
-      let sum = +num.innerHTML
-
-      if (e.classList.contains('count__plus')) {
-        ++sum
-        num.innerHTML = sum
-      }
-      if (e.classList.contains('count__minus')) {
-        if (sum > 1) {
-          --sum
-          num.innerHTML = sum
-        }
-      }
-    })
-  })
 
   if (document.querySelector('[name="phone"]')) {
     const element = document.querySelector('[name="phone"]')
@@ -150,12 +113,6 @@ $(document).ready(function () {
           suffix: '₽',
         }),
       })
-      // let attr = pips.querySelectorAll('[data-value]')
-      // let elem = Array.from(attr).splice(1)
-      // elem.forEach(function (el) {
-      //   let i = el.dataset.value.substr(0, 1)
-      //   el.innerHTML = i + ' ₽'
-      // })
       item.noUiSlider.on('update', function (values, handle) {
         item.previousElementSibling.innerHTML = values[handle] + ' ₽'
       })
@@ -222,27 +179,24 @@ $(document).ready(function () {
   if (document.querySelector('.projects__swiper')) {
     var projectsSwiper = new Swiper('.projects__swiper', {
       slidesPerView: 3,
-      spaceBetween: 30,
+      grid: {
+        rows: 3,
+      },
       breakpoints: {
         993: {
           slidesPerView: 3,
-          spaceBetween: 30,
         },
         769: {
           slidesPerView: 2.1,
-          spaceBetween: 20,
         },
         577: {
           slidesPerView: 2,
-          spaceBetween: 20,
         },
         391: {
           slidesPerView: 1.3,
-          spaceBetween: 10,
         },
         320: {
           slidesPerView: 1.1,
-          spaceBetween: 10,
         },
       },
       pagination: {
@@ -277,10 +231,6 @@ $(document).ready(function () {
           spaceBetween: 10,
         },
       },
-      // navigation: {
-      //   nextEl: `.team__arrow-next`,
-      //   prevEl: `.team__arrow-prev`,
-      // },
       pagination: {
         el: '.team__swiper-pagination',
       },

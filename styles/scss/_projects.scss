@@ -1,8 +1,6 @@
 .projects {
   &__wrapper {
-    padding-top: 30px;
-    @include fluid(padding-bottom, 60px, 100px);
-    @include fluid(margin-bottom, 30px, 55px);
+    @include fluid(padding-bottom, 30px, 55px);
     overflow: hidden;
 
     &--alt {
@@ -20,7 +18,16 @@
     overflow: visible;
 
     &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
       @include fluid(margin-bottom, 40px, 90px);
+      @include fluid(gap, 15px, 30px);
+    }
+
+    .swiper-slide {
+      height: 100% !important;
+      grid-column: 1fr;
+      width: 100% !important;
     }
 
     &-pagination {
@@ -43,6 +50,11 @@
       }
 
       .swiper {
+        &-slide {
+          height: calc((100% - 30px) / 2) !important;
+          @include fluid(margin-right, 10px, 30px);
+        }
+
         &-pagination {
           &-bullet {
             @include fluid(width, 15px, 20px);

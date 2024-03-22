@@ -1,9 +1,4 @@
 .gallery {
-  &__wrapper {
-    @include fluid(margin-top, 60px, 120px);
-    @include fluid(margin-bottom, 30px, 55px);
-  }
-
   &__title {
     @include fluid(margin-bottom, 40px, 90px);
   }
@@ -13,6 +8,10 @@
     grid-template-columns: repeat(3, 1fr);
     @include fluid(font-size, 15px, 30px);
     @include fluid(gap, 15px, 30px);
+
+    &:has(+*) {
+      @include fluid(margin-bottom, 20px, 60px);
+    }
   }
 }
 

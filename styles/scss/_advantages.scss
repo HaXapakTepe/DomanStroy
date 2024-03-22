@@ -1,12 +1,6 @@
 .advantages {
   &__wrapper {
-    padding-top: 30px;
-    @include fluid(padding-bottom, 60px, 100px);
     overflow: hidden;
-
-    &--mt {
-      @include fluid(margin-top, 60px, 120px);
-    }
   }
 
   &__title {

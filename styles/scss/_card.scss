@@ -1,10 +1,18 @@
 .card {
-  &:hover {
-    .card {
+  &__link {
+    display: block;
 
-      &__icon,
-      &__box::after {
-        opacity: 1;
+    &:has(+*) {
+      @include fluid(margin-bottom, 15px, 30px);
+    }
+
+    &:hover {
+      .card {
+
+        &__icon,
+        &__box::after {
+          opacity: 1;
+        }
       }
     }
   }
@@ -29,7 +37,6 @@
   &__box {
     position: relative;
     overflow: hidden;
-    @include fluid(margin-bottom, 15px, 30px);
 
     &::after {
       content: '';
@@ -42,6 +49,10 @@
       background-color: rgba(85, 93, 101, 0.6);
       opacity: 0;
       transition: opacity 0.23s ease-in-out;
+    }
+
+    &:has(+*) {
+      @include fluid(margin-bottom, 15px, 30px);
     }
   }
 

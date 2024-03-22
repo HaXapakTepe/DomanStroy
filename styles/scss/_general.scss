@@ -109,6 +109,20 @@ body {
   @include container;
 }
 
+section {
+  [class$="__wrapper"] {
+    @include fluid(margin-top, 45px, 90px);
+    @include fluid(margin-bottom, 45px, 90px);
+  }
+
+  .promo,
+  .about {
+    &__wrapper {
+      margin: 0;
+    }
+  }
+}
+
 [class$="__icon"],
 [class$="-icon"] {
   display: flex;

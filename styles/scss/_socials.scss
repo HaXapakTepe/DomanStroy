@@ -3,6 +3,25 @@
   align-items: center;
   @include fluid(gap, 15px, 30px);
 
+  &--fixed {
+    position: fixed;
+    @include fluid(right, 20px, 40px);
+    @include fluid(bottom, 20px, 40px);
+    transition: opacity 0.23s ease-in-out, visibility 0.23s ease-in-out, z-index 0.23s ease-in-out;
+  }
+
+  &--visible {
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
+  }
+
+  &--hidden {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+  }
+
   &__icon {
     svg {
       path {

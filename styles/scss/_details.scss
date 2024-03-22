@@ -1,8 +1,4 @@
 .details {
-  &__wrapper {
-    @include fluid(margin-bottom, 30px, 60px);
-  }
-
   &__inner {
     display: grid;
     grid-template-columns: 48% 48%;

@@ -1,13 +1,4 @@
 .info {
-  &__wrapper {
-    @include fluid(margin-top, 60px, 90px);
-    @include fluid(margin-bottom, 60px, 120px);
-
-    &--mbn {
-      margin-bottom: 0;
-    }
-  }
-
   &__title {
     @include fluid(margin-bottom, 20px, 60px);
     @include fluid(font-size, 20px, 32px);

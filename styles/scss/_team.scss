@@ -1,6 +1,7 @@
 .team {
   &__wrapper {
     padding-top: 30px;
+    @include fluid(padding-bottom, 30px, 55px);
     overflow: hidden
   }
 

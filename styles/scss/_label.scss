@@ -23,10 +23,18 @@
   color: #fff;
   cursor: pointer;
 
+  &.input--invalid {
+    .label__inputCustom {
+      box-shadow: inset 0 0 3px 2px rgb(238, 50, 50);
+      border-color: rgb(238, 50, 50);
+    }
+  }
+
   &__input {
     &:checked+.label__inputCustom {
       background-color: #64A821;
       border-color: #7EC637;
+      box-shadow: unset;
 
       .label__inputCustom-icon {
         transform: translate(-50%, -50%) scale(1);
@@ -43,7 +51,8 @@
     background-color: #fff;
     border: 1px solid #7EC637;
     transition: background-color 0.23s ease-in-out,
-      border-color 0.23s ease-in-out;
+      border-color 0.23s ease-in-out,
+      box-shadow .38s ease-in-out;
 
     &-icon {
       position: absolute;

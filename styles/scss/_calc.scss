@@ -1,10 +1,4 @@
 .calc {
-
-  &__wrapper {
-    @include fluid(margin-top, 60px, 90px);
-    @include fluid(margin-bottom, 60px, 90px);
-  }
-
   &__inner {
     background-color: #FBF8F6;
     border: 1px solid #E1D7D3;

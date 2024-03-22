@@ -1,6 +1,6 @@
 .top {
   &__title {
-    @include fluid(padding-bottom, 15px, 30px);
+    @include fluid(padding-bottom, 30px, 60px);
 
     &:has(+*) {
       @include fluid(margin-bottom, 15px, 30px);
